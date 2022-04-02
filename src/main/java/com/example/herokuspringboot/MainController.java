@@ -1,5 +1,6 @@
 package com.example.herokuspringboot;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +13,9 @@ public class MainController {
 
     @GetMapping("/ping")
     Map<String, Integer> ping() {
-        return Map.of("counter", COUNTER.getAndIncrement());
+        Map<String, Integer> map = new HashMap<>();
+        map.put("counter", COUNTER.getAndIncrement());
+        return map;
     }
 
 }
