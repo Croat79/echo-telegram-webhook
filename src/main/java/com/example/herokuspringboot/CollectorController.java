@@ -17,6 +17,7 @@ public class CollectorController {
 
     @GetMapping("/c")
     void ping(@RequestParam("t") String text) {
+        log.debug("{}", text);
         webhookBot.sendMessage(text);
     }
 

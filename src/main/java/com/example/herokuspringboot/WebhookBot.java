@@ -29,6 +29,7 @@ public class WebhookBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
+        log.debug("{}", update);
     }
 
     @SneakyThrows
