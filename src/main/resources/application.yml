@@ -1,0 +1,5 @@
+management.endpoint.health.show-details: ALWAYS
+
+tg:
+  token: ${TOKEN}
+  chatId: ${CHAT_ID}
