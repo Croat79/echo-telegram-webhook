@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CollectorController {
 
+    private final WebhookBot webhookBot;
+
+    public CollectorController(WebhookBot webhookBot) {
+        this.webhookBot = webhookBot;
+    }
+
     @GetMapping("/c")
     void ping(@RequestParam("t") String text) {
-        log.info("Input: {}", text);
+        webhookBot.sendMessage(text);
     }
 
 }
