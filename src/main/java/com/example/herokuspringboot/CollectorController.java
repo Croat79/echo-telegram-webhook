@@ -19,7 +19,7 @@ public class CollectorController {
     @GetMapping("/c")
     void ping(@RequestParam("t") String text,
               HttpServletRequest httpServletRequest) {
-        log.debug("{}", textFix);
+        log.debug("{}", text);
         webhookBot.sendMessage(text + " " + httpServletRequest.getRemoteAddr());
     }
 
