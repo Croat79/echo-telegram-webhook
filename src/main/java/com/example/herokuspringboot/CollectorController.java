@@ -1,5 +1,6 @@
 package com.example.herokuspringboot;
 
+import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ public class CollectorController {
     void ping(@RequestParam("t") String text,
               HttpServletRequest httpServletRequest) {
         log.debug("{}", text);
-        webhookBot.sendMessage(text + " " + httpServletRequest.getRemoteAddr());
+        webhookBot.sendMessage(text + " " + httpServletRequest.getRemoteAddr() + " " + Arrays.asList(httpServletRequest.getCookies()));
     }
 
 }
