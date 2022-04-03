@@ -7,17 +7,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CollectorController {
+public class ProxyController {
 
     private final Sender sender;
 
-    public CollectorController(Sender sender) {
+    public ProxyController(Sender sender) {
         this.sender = sender;
     }
 
     @GetMapping("/c")
-    void ping(@RequestParam("t") String text,
-              HttpServletRequest httpServletRequest) {
+    void proxyToSender(@RequestParam("t") String text, HttpServletRequest httpServletRequest) {
         sender.send(text + " " + httpServletRequest.getRemoteAddr());
     }
 
