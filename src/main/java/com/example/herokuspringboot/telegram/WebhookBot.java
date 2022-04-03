@@ -1,5 +1,6 @@
-package com.example.herokuspringboot;
+package com.example.herokuspringboot.telegram;
 
+import com.example.herokuspringboot.config.TelegramProperties;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

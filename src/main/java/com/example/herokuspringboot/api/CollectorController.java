@@ -1,5 +1,6 @@
-package com.example.herokuspringboot;
+package com.example.herokuspringboot.api;
 
+import com.example.herokuspringboot.telegram.Sender;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

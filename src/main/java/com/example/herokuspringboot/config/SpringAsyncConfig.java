@@ -1,4 +1,4 @@
-package com.example.herokuspringboot;
+package com.example.herokuspringboot.config;
 
 import java.util.concurrent.Executor;
 import org.springframework.context.annotation.Bean;
@@ -14,5 +14,5 @@ public class SpringAsyncConfig {
     public Executor threadPoolTaskExecutor() {
         return new ThreadPoolTaskExecutor();
     }
-    
+
 }
